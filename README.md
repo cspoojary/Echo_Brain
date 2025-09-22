@@ -1,2 +1,2 @@
 # Echo_Brain
-Iam Doint Data Science With AI
+Iam Doing Data Science With AI
