@@ -5,4 +5,6 @@ Iam Doing Data Science With AI
 
 [Python EB notes](https://classroom.google.com/c/NzUxOTY2MDI4NTM0)
 
+[Python EB notes](https://classroom.google.com/c/NzUxOTY2MDI4NTM0/sa/NzUxOTY4MDYyNjI3/details)
+
 
