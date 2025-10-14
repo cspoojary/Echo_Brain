@@ -9,4 +9,4 @@ Iam Doing Data Science With AI
 
 [Python Pandas](https://classroom.google.com/c/NzUxOTY2MDI4NTM0/m/Nzg3NTYzODYzMzUw/details)
 
-[Python Pandas](https://classroom.google.com/c/NzUxOTY2MDI4NTM0/m/NzgyNjQ5NjExMzcw/details)
+[Python Numpy](https://classroom.google.com/c/NzUxOTY2MDI4NTM0/m/NzgyNjQ5NjExMzcw/details)
