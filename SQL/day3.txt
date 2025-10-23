@@ -1,0 +1,104 @@
+Transaction in sql
+
+wild card character
+
+
+syntax */columlist/ expression from <tablename> where <condition> order by Columlist group by Columlist group by Columlist having <condition>;
+
+where clause
+order clause - display the output either ascending/ descending order.
+
+group by - the column with repeated values can be grouped, dept wise, product wise etc.
+
+having - with group by column we can add the condition(only with group by, having can be used)
+
+SELECT = DQL
+
+
+JOINS
+
+
+Aggregate Function or statistical or grouping:
+sum(), avg(), max(), min(), count()
+
+library function:
+text, numerical, date and time, formatting, db functions etc.
+
+
+Subquery:(query within another query)
+select * from emp where sal = (select max(sal) from emp);
+
+
+find the employee list who are earning more than average salary.
+select
+
+
+
+
+
+Today's query:
+select * from EMP;
+SELECT * FROM SALGRADE;
+SELECT * FROM BONUS;
+SELECT * FROM DEPT;
+SELECT DISTINCT JOB FROM EMP;
+SELECT * FROM EMP WHERE HIREDATE LIKE '1981%';
+select empno ,ename,e.deptno,dname from emp e, dept d where e.deptno =d.deptno;
+select ename,job,sal from emp order by sal;
+select ename,job,sal from emp order by sal desc;
+select ename,job,sal from emp order by sal desc limit 1;
+select ename,job,sal,"Is the top earner" from emp order by sal desc limit 1;
+select ename,"Is the top earner" from emp order by sal desc limit 1;
+select ename,"Is the top earner" as "" from emp order by sal desc limit 1;
+select ename,"Is the top earner" as "" from emp order by sal desc limit 1 offset 1;
+select ename,job, sal, "Is the top earner" as "" from emp order by sal desc limit 1 offset 1;
+select sum(sal), avg(sal), min(sal), max(sal), count(*) from emp;
+select * from emp where sal = (select max(sal) from emp);
+select * from emp where sal < (select avg(sal) from emp);
+select deptno,sum(sal) from emp group by deptno;
+select * from emp where deptno=10;
+select * from emp where deptno=20;
+select deptno, count(*) from emp group by deptno;
+select deptno, sum(sal) As sum, avg(sal) as avg from emp group by deptno;
+select deptno, sum(sal), avg(sal), count(*) from emp group by deptno having avg(sal) > 2500;
+select deptno,count(*) from emp group by deptno;
+select  d.deptno,d.dname,count(d.dname) from emp e, dept d where d.deptno = e.deptno group by dname, deptno;
+
+Assignment.
+
+find who is second highest earner of the organization
+->SELECT ENAME, SAL FROM emp ORDER BY SAL DESC LIMIT 1 OFFSET 1;
+
+->SELECT ENAME, SAL FROM EMP WHERE SAL = ( SELECT MAX(SAL) FROM EMP WHERE SAL < (SELECT MAX(SAL) FROM EMP));
+
+count number of employee earning less than the avg of their department
+->select count(*) As emp_blw_avg_sal from emp e where e.sal < (select avg(sal) from emp where deptno = e.deptno);
+
+->SELECT ENAME, SAL FROM EMP WHERE SAL = ( SELECT MAX(SAL) FROM EMP WHERE SAL < (SELECT MAX(SAL) FROM EMP));
+
+
+List the employee name who are earning more the avg sal.
+->SELECT ENAME, SAL
+FROM emp
+WHERE SAL > (SELECT AVG(SAL) FROM emp);
+
+-> SELECT ENAME, SAL, DEPTNO
+FROM emp e
+WHERE SAL > (
+    SELECT AVG(SAL)
+    FROM emp
+    WHERE DEPTNO = e.DEPTNO
+);
+
+
+Count no. of employees joined the year between 1980 and 1982.
+-> SELECT ENAME, HIREDATE FROM EMP WHERE YEAR(HIREDATE) BETWEEN 1980 AND 1982;
+-> SELECT COUNT(*) AS Num_Employees
+FROM emp
+WHERE YEAR(HIREDATE) BETWEEN 1980 AND 1982;
+
+
+Display deptno wise ascending and sal wise descending.
+-> SELECT ENAME, DEPTNO, SAL
+FROM emp
+ORDER BY DEPTNO ASC, SAL DESC;
