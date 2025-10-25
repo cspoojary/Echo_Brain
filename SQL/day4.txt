@@ -1,0 +1,34 @@
+Backup copy of the table.
+->create table empback as select * from emp;
+
+
+ex: 
+drop table empback; --Clear both table structure & data.
+
+truncate table empback; -- clears only the data and retain the structure
+
+--create a table using select query/ get back up of existing table.
+create table empback as select * from emp.
+
+alter table:a
+Adding mew column
+Modify existing column type, size
+drop a column
+
+->To alter table structure:
+alter table<tablename> [add/modify/drop] column columndefinition;
+alter table product modify pid bigint;
+
+eg: -- change the type or size
+alter table product modify pid bigint;
+
+-- add new column
+alter table product add colun licenseno varchar(10);
+
+-- to remove an unwanted column
+alter table product drop columns ammi;
+alter table product drop column ammi;
+alter table product modify pid bigint;
+
+
+update emp set comm = sal * 0.30;
