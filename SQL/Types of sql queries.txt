@@ -1,0 +1,86 @@
+SQL  queries can be divided into DDL, DML, DCL,TCL, DQL
+
+DDL - data definition language
+DML - data Manipulation "
+DCL -  "  control         "
+TCL - Transaction control  "
+DQL - data query language
+
+DDL :  creating, altering, drop, rename database and tables structure
+
+
+DML : insert, update, delete the records into tables
+
+DCL : grant and revoke the permission on the tables to other users
+
+TCL : we can commit or rollback the transactions using save point
+
+DQL : extracting the data from tables
+
+To create a new DB: (DDL)
+create database <dbname>;
+
+To view all available DB in current login:
+
+-> show databases;
+
+To use or working on a DB: (DDL)
+
+-> use <dbname>;
+
+To create a table under a DB: (DDL)
+
+create table tablename (columnname1 datatype, ..... columnnameN datatype);
+
+** When we are creating a table we can define column with datatype, size and constraints or rules.
+
+ 
+to insert records to table (DML)
+
+insert into tablename values (value1,.... valueN);
+
+to view all the records from a table
+
+select * from tablename;(DQL)
+
+to view structure of a table
+
+describe tablename;(DDL)
+
+desc tablename;
+
+to know currently working DB: (DQL)
+select database();
+
+SQL 
+Structured Query Language
+
+Its a common language used in all DBMS/RDBMS software
+
+To perform all database operations (Creating/alter/delete DB, Tables, Insert/update/delete records, assigning the permission on the table to other users, querying the tables, computing the data, generating reports, handling DB transactions etc)
+
+
+DB Objects that can be created in MYSQL
+
+Tables, views, stored procedures, functions, triggers, indexes
+
+
+Tables : In a DB we can create any no. of tables
+where we can store data in Rows and columns with proper validation
+
+Views : virtual tables, we can create view to get the data from one or more tables. we can hide the original objects, unnecessary data.
+
+Stored procedures/Functions : to perform repeated task in a DB we can defined code, once its created it can be used from applications and DB platforms. It increases data fetching speed in Server.
+
+triggers : kind of procedures used to monitor and stop the invalid action on the tables and DB.
+
+Indexes : To organize the table data using key columns, so that we can extract or search data quickly
+
+
+
+
+PL/SQL  - Procedural Language/sql
+
+
+
+MySQL CLI:  Command Line Interface
